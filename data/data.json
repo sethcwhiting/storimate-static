@@ -1,0 +1,24 @@
+{
+  "segments": [
+    {
+      "time": 16000,
+      "phrase": "This is an intro."
+    },
+    {
+      "time": 22000,
+      "phrase": "This is Mickey; he's having a great day."
+    },
+    {
+      "time": 2000,
+      "phrase": "Until the captain enters."
+    },
+    {
+      "time": 8000,
+      "phrase": "The captain is not very happy."
+    },
+    {
+      "time": 6000,
+      "phrase": "He tells Mickey to get back to work."
+    }
+  ]
+}

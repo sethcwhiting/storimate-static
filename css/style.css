@@ -1,0 +1,49 @@
+html,
+body,
+iframe {
+	width: 100%;
+	height: 100%;
+}
+
+iframe {
+	pointer-events: none;
+}
+
+#message,
+#caption {
+	position: fixed;
+	left: 0;
+	right: 0;
+	padding: 0 30px;
+	font-family: sans-serif;
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	text-shadow: 0 0 2px black;
+	letter-spacing: 2px;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+#message {
+	top: 0;
+	padding-top: 48px;
+}
+
+#caption {
+	bottom: 0;
+	padding-bottom: 48px;
+}
+
+#caption li {
+	display: inline-block;
+	list-style: none;
+	padding: 0 5px;
+}
+
+.deactivated {
+	opacity: 0.25;
+    text-shadow: none;
+	transition: all 0.25s ease;
+}
