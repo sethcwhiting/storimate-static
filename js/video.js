@@ -13,7 +13,7 @@ function onYouTubeIframeAPIReady() {
 		height: '100%',
 		width: '100%',
 		videoId: 'BBgghnQF6E4',
-    playerVars: { 'start': 15, 'showinfo': 0, 'controls': 0, 'playsinline': 1 },
+    playerVars: { 'start': 15, 'showinfo': 0, 'controls': 0, 'playsinline': 1, 'rel': 0 },
 		events: { 'onReady': onPlayerReady }
 	});
 }
