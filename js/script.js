@@ -14,8 +14,6 @@ var sentenceCount = 0,
 		elementCount = 0,
 		intervalCount = 0;
 
-// var firstTest = true;
-
 // Display the words of a sentence
 function displayText() {
 	$('#caption').html('');
@@ -24,10 +22,6 @@ function displayText() {
 		$('#caption').css('opacity', 1);
 		elementCount++;
 	}
-	// if (!firstTest) {
-	// 	listen();
-	// }
-	// firstTest = false;
 }
 
 // Perform actions related to given word

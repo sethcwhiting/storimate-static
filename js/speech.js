@@ -57,7 +57,7 @@ if (!('webkitSpeechRecognition' in window)) {
       	}
       } else {
         currentDetected = allDetected[allDetected.length - 1];
-        if ( currentDetected.toUpperCase() != previousPresented.toUpperCase() ) {
+        if ( previousPresented && currentDetected.toUpperCase() != previousPresented.toUpperCase() ) {
           if ( currentDetected.toUpperCase() != currentPresented.toUpperCase() ) {
             if ( failCount < 2 ) {
               $('#message').html( 'Sorry! I heard "' + currentDetected + '" instead of "' + currentPresented + '."' );
