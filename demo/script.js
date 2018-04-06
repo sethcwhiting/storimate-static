@@ -24,6 +24,7 @@ function nextPhrase() {
   if (currentPhraseIndex < phrases.length) {
     return currentPhraseIndex;
   }
+  currentPhraseIndex = 0;
   return 0;
 }
 
