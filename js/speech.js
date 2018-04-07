@@ -3,7 +3,6 @@ var ignore_onend;
 var start_timestamp;
 if (!('webkitSpeechRecognition' in window)) {
   console.log('no webkit speech recognition');
-  return;
 }
 
 var recognition = {};
