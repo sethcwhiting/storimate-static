@@ -5,7 +5,7 @@ if (!('webkitSpeechRecognition' in window)) {
   console.log('no webkit speech recognition');
 }
 
-var recognition = {};
+var recognition = new webkitSpeechRecognition();
 
 function listen() {
   if (recognizing) {
