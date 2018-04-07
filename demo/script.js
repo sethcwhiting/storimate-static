@@ -25,7 +25,7 @@ function nextPhrase() {
     return currentPhraseIndex;
   }
   currentPhraseIndex = 0;
-  return 0;
+  return currentPhraseIndex;
 }
 
 function testSpeech() {
