@@ -13,8 +13,7 @@ function listen() {
     return;
   }
   final_transcript = '';
-  var currentSentenceIndex = sentenceCount ? sentenceCount : 0;
-  var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + sentences[currentSentenceIndex] +';';
+  var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + sentences[0] +';';
   recognition = new webkitSpeechRecognition();
   var speechRecognitionList = new SpeechGrammarList();
   speechRecognitionList.addFromString(grammar, 1);
