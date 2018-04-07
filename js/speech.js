@@ -15,7 +15,7 @@ function listen() {
   final_transcript = '';
   var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + sentences[0] +';';
   recognition = new webkitSpeechRecognition();
-  var speechRecognitionList = new SpeechGrammarList();
+  var speechRecognitionList = new webkitSpeechGrammarList();
   speechRecognitionList.addFromString(grammar, 1);
   recognition.grammars = speechRecognitionList;
   console.log(recognition.grammars);
