@@ -18,7 +18,6 @@ function listen() {
   var speechRecognitionList = new webkitSpeechGrammarList();
   speechRecognitionList.addFromString(grammar, 1);
   recognition.grammars = speechRecognitionList;
-  console.log(recognition.grammars);
   recognition.continuous = true;
   recognition.interimResults = true;
   recognition.lang = 'en-US';
@@ -28,6 +27,7 @@ function listen() {
 }
 
 recognition.onstart = function() {
+  console.log('starting');
   recognizing = true;
 };
 
