@@ -4,7 +4,12 @@ var start_timestamp;
 if (!('webkitSpeechRecognition' in window)) {
   console.log('no webkit speech recognition');
 }
+var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + sentences[0] +';';
 var recognition = new webkitSpeechRecognition();
+var speechRecognitionList = new webkitSpeechGrammarList();
+speechRecognitionList.addFromString(grammar, 1);
+console.log(speechRecognitionList);
+recognition.grammars = speechRecognitionList;
 recognition.continuous = true;
 recognition.interimResults = true;
 
