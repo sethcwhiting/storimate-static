@@ -1,3 +1,4 @@
+var recognition;
 var recognizing = false;
 
 function listen() {
@@ -8,7 +9,7 @@ function listen() {
   var ignore_onend = false;
   var start_timestamp = new Date().getTime();
   var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + sentences[sentenceCount] +';';
-  var recognition = new webkitSpeechRecognition();
+  recognition = new webkitSpeechRecognition();
   var speechRecognitionList = new webkitSpeechGrammarList();
   speechRecognitionList.addFromString(grammar, 1);
   console.log(speechRecognitionList);
