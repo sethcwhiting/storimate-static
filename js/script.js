@@ -56,6 +56,7 @@ function playSegment() {
 	setTimeout(function() {
 		freeze();
 		nextSentence();
+		listen();
 	}, timeIntervals[intervalCount]);
 	intervalCount++;
 }
