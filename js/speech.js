@@ -58,7 +58,8 @@ function listen() {
       var allPresented = words[sentenceCount],
           currentPresented = words[sentenceCount][wordCount].replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""),
           allDetected = event.results[i][0].transcript.split(' '),
-          currentDetected = '';
+          currentDetected = '',
+          previousPresented = '';
 
       if (!event.results[i].isFinal) {
         for (var j = 0; j < allDetected.length; j++) {
@@ -70,7 +71,7 @@ function listen() {
       	}
       } else {
         currentDetected = allDetected[allDetected.length - 1];
-        if ( previousPresented && currentDetected.toUpperCase() != previousPresented.toUpperCase() ) {
+        if ( currentDetected.toUpperCase() != previousPresented.toUpperCase() ) {
           if ( currentDetected.toUpperCase() != currentPresented.toUpperCase() ) {
             if ( failCount < 2 ) {
               $('#message').html( 'Sorry! I heard "' + currentDetected + '" instead of "' + currentPresented + '."' );
