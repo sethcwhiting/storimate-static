@@ -24,10 +24,12 @@ function listen() {
   }
 
   recognition.onstart = function() {
+    console.log('SpeechRecognition.onstart');
     recognizing = true;
   };
 
   recognition.onerror = function(event) {
+    console.log('SpeechRecognition.onerror');
     if (event.error == 'no-speech') {
       console.log('no speech');
       ignore_onend = true;
@@ -47,6 +49,7 @@ function listen() {
   };
 
   recognition.onend = function() {
+    console.log('SpeechRecognition.onend');
     recognizing = false;
     if (ignore_onend) {
       return;
@@ -55,6 +58,7 @@ function listen() {
 
   var failCount = 0;
   recognition.onresult = function(event) {
+    console.log('SpeechRecognition.onresult');
     for (var i = event.resultIndex; i < event.results.length; ++i) {
 
       var allPresented = words[sentenceCount],
