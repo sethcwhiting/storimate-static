@@ -1,18 +1,19 @@
+// Specify data to be incremented
+var sentenceCount = 0,
+		wordCount = 0,
+		elementCount = 0,
+		intervalCount = 0;
+
 // Check for discrepancies in array lengths and begin
 function safeStart() {
 	if ( timeIntervals.length === sentences.length ) {
+		listen();
 		displayText();
 	} else {
 		console.log('You must declare exactly as many time intervals as sentences.');
 		return;
 	}
 }
-
-// Specify data to be incremented
-var sentenceCount = 0,
-		wordCount = 0,
-		elementCount = 0,
-		intervalCount = 0;
 
 // Display the words of a sentence
 function displayText() {
