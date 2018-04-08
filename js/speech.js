@@ -5,10 +5,6 @@ function listen() {
     console.log('no webkit speech recognition');
     return;
   }
-  if (recognizing) {
-    recognition.stop();
-    return;
-  }
   var ignore_onend = false;
   var start_timestamp = new Date().getTime();
   var grammar = '#JSGF V1.0; grammar phrase; public <phrase> = ' + sentences[sentenceCount] +';';
@@ -20,6 +16,11 @@ function listen() {
   recognition.grammars = speechRecognitionList;
   recognition.continuous = true;
   recognition.interimResults = true;
+
+  if (recognizing) {
+    recognition.stop();
+    return;
+  }
 
   recognition.onstart = function() {
     recognizing = true;

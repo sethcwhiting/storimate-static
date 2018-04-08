@@ -48,6 +48,7 @@ function deactivateWord() {
 
 // Play video for specified amount of time
 function playSegment() {
+	recognition.stop();
 	$('#caption').css('opacity', 0);
 	setTimeout(function() {
 		$('#caption').html('');
