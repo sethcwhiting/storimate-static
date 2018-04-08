@@ -92,5 +92,3 @@ function listen() {
   };
   recognition.start();
 }
-
-listen();

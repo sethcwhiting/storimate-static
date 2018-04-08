@@ -12,6 +12,7 @@ $.getJSON('data/data.json').done(function(data){
   for (var i = 0; i < sentences.length; i++) {
   	words.push(sentences[i].split(' '));
   }
+	listen();
 
 }).fail(function(jqxhr, textStatus, error) {
 	console.log(error);
