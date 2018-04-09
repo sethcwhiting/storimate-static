@@ -11,7 +11,7 @@ function safeStart() {
 		displayText();
 
 		var bgAudio = new Audio('https://www.bensound.com/bensound-music/bensound-jazzyfrenchy.mp3');
-		bgAudio.loop = true;
+		// bgAudio.loop = true;
 		bgAudio.play();
 
 	} else {
