@@ -10,9 +10,7 @@ function safeStart() {
 		listen();
 		displayText();
 
-		var bgAudio = new Audio({
-			src: 'https://www.bensound.com/bensound-music/bensound-jazzyfrenchy.mp3'
-		});
+		var bgAudio = new Audio('https://www.bensound.com/bensound-music/bensound-jazzyfrenchy.mp3');
 		bgAudio.play();
 
 	} else {
