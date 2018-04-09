@@ -19,6 +19,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady() {
+	player.mute();
 	player.playVideo();
 	setTimeout(freeze, 500);
 	safeStart();
