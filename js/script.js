@@ -9,6 +9,12 @@ function safeStart() {
 	if ( timeIntervals.length === sentences.length ) {
 		listen();
 		displayText();
+
+		var bgAudio = new Audio({
+			src: 'https://www.bensound.com/bensound-music/bensound-jazzyfrenchy.mp3'
+		});
+		bgAudio.play();
+
 	} else {
 		console.log('You must declare exactly as many time intervals as sentences.');
 		return;
